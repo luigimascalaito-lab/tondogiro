@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tondogiro · Mostra di Erasmo Pucci</title>
+<meta name="description" content="tondogiro, mostra di Erasmo Pucci: 18 opere in tecnica mista tra girotondi e hula hoop. Pieve di San Giovanni Battista, San Giovanni Valdarno, 18–27 settembre 2026.">
+<meta name="author" content="Erasmo Pucci">
+<meta name="theme-color" content="#FAFAF7">
+<!-- Anteprima sui social e su WhatsApp: sostituire INDIRIZZO-DEL-SITO con l'indirizzo definitivo -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="tondogiro · Mostra di Erasmo Pucci">
+<meta property="og:description" content="Girotondi e hula hoop in 18 opere. Pieve di San Giovanni Battista, San Giovanni Valdarno, 18–27 settembre 2026.">
+<meta property="og:image" content="https://luigimascalaito.github.io/tondogiro/img/anteprima-social.jpg">
+<meta property="og:url" content="https://luigimascalaito.github.io/">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/icone/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/icone/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/icone/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="fonts/caveat-brush-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<noscript><p style="padding:1rem 4vw;margin:0;border-bottom:2px solid #000">Per far girare le opere serve JavaScript attivo. I testi della mostra sono comunque leggibili qui sotto.</p></noscript>
+<header class="piazza">
+  <div class="intestazione">
+    <h1 class="titolo" aria-label="tondogiro"><span>tondo</span><span>giro</span></h1>
+    <p class="sottotitolo">Mostra di Erasmo Pucci</p>
+    <p class="dati">18–27 settembre 2026<br>Pieve di San Giovanni Battista<br>San Giovanni Valdarno</p>
+    <ul class="guida">
+      <li><i></i>Cerchio esterno: i girotondi</li>
+      <li><i class="int"></i>Cerchio interno: l'hula hoop</li>
+      <li>Trascina per far girare i cerchi, tocca un'opera per guardarla da vicino.</li>
+    </ul>
+    <a class="scendi" href="#mostra">Leggi la mostra</a>
+  </div>
+
+  <div class="palco" id="palco" aria-label="Le opere disposte in due cerchi concentrici. Usa le frecce per farli girare.">
+    <svg class="rima" viewBox="-50 -50 100 100" aria-hidden="true">
+      <defs><path id="giro" d="M 0,-27.8 a 27.8,27.8 0 1,1 -0.01,0"/></defs>
+      <circle r="27.8"/>
+      <g id="rimaGiro">
+        <text><textPath href="#giro" startOffset="0">Giro giro tondo, casca il mondo, casca la terra, tutti giù per terra!  Giro giro tondo, casca il mondo, casca la terra, tutti giù per terra!</textPath></text>
+      </g>
+    </svg>
+    <button class="centro" id="casca" type="button">tutti giù per terra!</button>
+  </div>
+</header>
+<p class="aiuto">Trascina per far girare i cerchi, tocca un'opera per guardarla da vicino.</p>
+
+<main class="mostra" id="mostra">
+  <section class="col-a">
+    <h2>La mostra</h2>
+    <p>A distanza esatta di un anno, le opere di Erasmo Pucci, giovane illustratore e fumettista, tornano ad essere esposte nella Pieve di San Giovanni Battista.</p>
+    <p>Il titolo “Tondogiro” è un gioco linguistico che nasce dalla scomposizione e poi ricomposizione della parola girotondo. Nella memoria collettiva il termine girotondo richiama alla mente i giochi dell'infanzia, lo stare insieme e anche, perché no, il movimento di Nanni Moretti che aveva riportato i valori della collettività nelle nostre piazze.</p>
+    <p>Sono 18 opere realizzate con tecnica mista, divise in due nuclei. Questa produzione è stata pensata e realizzata appositamente per questa mostra.</p>
+  </section>
+
+  <aside class="col-b">
+    <h2>Orari</h2>
+    <ul class="orari">
+      <li><b>Sabato 19, domenica 20 e lunedì 21</b><span>10:00–12:00, 16:00–19:30, 21:00–22:30</span></li>
+      <li><b>Da martedì 22 a venerdì 25</b><span>16:00–19:30</span></li>
+      <li><b>Sabato 26 e domenica 27</b><span>10:00–12:00, 16:00–19:30</span></li>
+    </ul>
+    <p class="inaugurazione">Inaugurazione venerdì 18 settembre, ore 17:30</p>
+  </aside>
+
+  <div class="nuclei">
+    <div class="nucleo">
+      <span class="cerchio" aria-hidden="true">I</span>
+      <div><h3>I girotondi</h3><p>Il primo nucleo reinterpreta i classici girotondi dai movimenti circolari.</p></div>
+    </div>
+    <div class="nucleo">
+      <span class="cerchio" aria-hidden="true">II</span>
+      <div><h3>L'hula hoop</h3><p>Il secondo, partendo dal vecchio gioco dell'hula hoop, lo rappresenta in diverse prospettive, mettendo al centro dell'attenzione la figura umana.</p></div>
+    </div>
+  </div>
+
+  <section class="col-a">
+    <h2>L'artista</h2>
+    <p>Erasmo è laureando presso l'Accademia di Belle Arti di Bologna in fumetto e illustrazione e nella scorsa primavera ha partecipato a un progetto editoriale all'Università di Gand, in Belgio.</p>
+    <p>Nel mese di giugno è stato selezionato per la Spring School, scuola di fumetto a Ravenna organizzata dalla casa editrice Coconino Press. Durante l'anno scolastico è stato impegnato come esperto esterno di fumetto in alcune scuole primarie e secondarie di primo grado della provincia di Firenze.</p>
+  </section>
+  <aside class="col-b">
+    <p class="filastrocca">Giro giro tondo,<br>casca il mondo,<br>casca la terra,<br>tutti giù per terra!</p>
+  </aside>
+</main>
+
+<footer>
+  <span>tondogiro. Mostra di Erasmo Pucci, San Giovanni Valdarno 2026</span>
+  <span>Opere su carta, tecnica mista</span>
+</footer>
+
+<!-- Visore -->
+<div class="visore" id="visore" role="dialog" aria-modal="true" aria-labelledby="vTitolo">
+  <div class="barra">
+    <div class="didascalia"><h3 id="vTitolo"></h3><p id="vNucleo"></p></div>
+    <button class="tondo" id="vChiudi" type="button" aria-label="Chiudi">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="finestra" id="finestra">
+    <img id="vImg" alt="">
+    <div class="lente" id="lente"></div>
+    <div class="suggerimento" id="sugg">Doppio tocco o rotellina per ingrandire</div>
+  </div>
+  <div class="comandi">
+    <button class="tondo" id="vPrec" type="button" aria-label="Opera precedente"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="contatore" id="vConta"></span>
+    <button class="tondo" id="vSucc" type="button" aria-label="Opera successiva"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    <span class="sep"></span>
+    <button class="tondo" id="vMeno" type="button" aria-label="Riduci"><svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg></button>
+    <button class="tondo" id="vPiu" type="button" aria-label="Ingrandisci"><svg viewBox="0 0 24 24"><path d="M6 12h12M12 6v12"/></svg></button>
+    <button class="tondo" id="vLente" type="button" aria-pressed="false" aria-label="Lente tonda"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+  </div>
+</div>
+
+<script src="js/opere.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

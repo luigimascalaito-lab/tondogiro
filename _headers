@@ -1,0 +1,7 @@
+# Usato da Netlify e Cloudflare Pages (ignorato dagli altri servizi)
+/sw.js
+  Cache-Control: no-cache
+/img/*
+  Cache-Control: public, max-age=2592000
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
