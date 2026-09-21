@@ -1,7 +1,7 @@
 /* Service worker: mette in cache tutta la mostra, così la app
    funziona anche dove in chiesa il segnale è debole.
    Quando si modificano opere o testi, aumentare il numero di VERSIONE. */
-const VERSIONE = 'tondogiro-v2';
+const VERSIONE = 'tondogiro-v3';
 const FILE = [
   './',
   'index.html',
@@ -14,6 +14,7 @@ const FILE = [
   'img/icone/favicon-32.png',
   'img/icone/favicon.svg',
   'img/icone/icona-192.png',
+  'img/icone/icona.svg',
   'img/icone/icona-512.png',
   'img/icone/icona-maskable-512.png',
   'img/opere/cortile-dei-cerchi.jpg',

@@ -38,6 +38,10 @@
       <li>Trascina per far girare i cerchi, tocca un'opera per guardarla da vicino.</li>
     </ul>
     <a class="scendi" href="#mostra">Leggi la mostra</a>
+    <button class="installa" id="installa" type="button" hidden>
+      <img src="img/icone/icona.svg" alt="" width="40" height="40">
+      <span>Installa la mostra sul telefono</span>
+    </button>
   </div>
 
   <div class="palco" id="palco" aria-label="Le opere disposte in due cerchi concentrici. Usa le frecce per farli girare.">
@@ -96,6 +100,20 @@
   <span>tondogiro. Mostra di Erasmo Pucci, San Giovanni Valdarno 2026</span>
   <span>Opere su carta, tecnica mista</span>
 </footer>
+
+<!-- Istruzioni per iPhone e iPad -->
+<div class="istruzioni" id="istruzioni" role="dialog" aria-modal="true" aria-labelledby="iTitolo" hidden>
+  <div class="scheda">
+    <img src="img/icone/icona.svg" alt="" width="72" height="72">
+    <h2 id="iTitolo">Porta tondogiro sul telefono</h2>
+    <ol>
+      <li>Tocca <span class="ico-condividi" aria-label="Condividi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5"/><path d="M8 10H6v10h12V10h-2"/></svg></span> <b>Condividi</b> nella barra di Safari.</li>
+      <li>Scorri e scegli <b>Aggiungi alla schermata Home</b>.</li>
+      <li>Tocca <b>Aggiungi</b>: il minigirotondo comparirà tra le tue app.</li>
+    </ol>
+    <button class="chiudi-istr" id="iChiudi" type="button">Ho capito</button>
+  </div>
+</div>
 
 <!-- Visore -->
 <div class="visore" id="visore" role="dialog" aria-modal="true" aria-labelledby="vTitolo">

@@ -225,6 +225,28 @@ V.fin.addEventListener('pointerup',fine); V.fin.addEventListener('pointercancel'
 V.fin.addEventListener('pointerleave',e=>{ if(lenteOn && e.pointerType!=='touch') V.lente.style.display='none'; });
 V.fin.addEventListener('wheel', e=>{ e.preventDefault(); zoomA(sc*Math.exp(-e.deltaY*0.0018), e.clientX, e.clientY); },{passive:false});
 
+/* ---------- Installa la mostra sul telefono ---------- */
+(function(){
+  const btn=document.getElementById('installa'), box=document.getElementById('istruzioni'), chiudi=document.getElementById('iChiudi');
+  const installata = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+  let richiesta=null;
+  if(installata) return;
+  // Android e Chrome/Edge da computer: il browser offre l'installazione diretta
+  addEventListener('beforeinstallprompt', e=>{ e.preventDefault(); richiesta=e; btn.hidden=false; });
+  // iPhone e iPad: Apple non consente l'installazione diretta, mostriamo le istruzioni
+  if(ios) btn.hidden=false;
+  btn.addEventListener('click', async ()=>{
+    if(richiesta){ richiesta.prompt(); const r=await richiesta.userChoice; if(r.outcome==='accepted') btn.hidden=true; richiesta=null; }
+    else if(ios){ box.hidden=false; chiudi.focus(); }
+  });
+  const nascondi=()=>{ box.hidden=true; btn.focus(); };
+  chiudi.addEventListener('click', nascondi);
+  box.addEventListener('click', e=>{ if(e.target===box) nascondi(); });
+  addEventListener('keydown', e=>{ if(e.key==='Escape' && !box.hidden) nascondi(); });
+  addEventListener('appinstalled', ()=>{ btn.hidden=true; });
+})();
+
 /* Funzionamento senza rete: registra il service worker */
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){
   addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
