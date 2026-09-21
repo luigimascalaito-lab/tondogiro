@@ -1,7 +1,7 @@
 /* Service worker: mette in cache tutta la mostra, così la app
    funziona anche dove in chiesa il segnale è debole.
    Quando si modificano opere o testi, aumentare il numero di VERSIONE. */
-const VERSIONE = 'tondogiro-v1';
+const VERSIONE = 'tondogiro-v2';
 const FILE = [
   './',
   'index.html',
@@ -46,9 +46,17 @@ self.addEventListener('activate', e => {
 });
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+  // Pagina HTML: prima la rete (così le modifiche arrivano subito), la cache solo se manca il segnale
+  if (e.request.mode === 'navigate') {
+    e.respondWith(fetch(e.request).then(res => {
+      const copia = res.clone(); caches.open(VERSIONE).then(c => c.put('index.html', copia)); return res;
+    }).catch(() => caches.match('index.html')));
+    return;
+  }
+  // Immagini, caratteri, stili, script: prima la cache
   e.respondWith(caches.match(e.request, {ignoreSearch:true}).then(r => r || fetch(e.request).then(res => {
     const copia = res.clone();
     if (res.ok && new URL(e.request.url).origin === location.origin) caches.open(VERSIONE).then(c => c.put(e.request, copia));
     return res;
-  })).catch(() => caches.match('index.html')));
+  })));
 });
